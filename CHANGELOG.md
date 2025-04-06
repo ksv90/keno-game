@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.2](https://github.com/ksv90/keno-game/compare/v0.0.1...v0.0.2) (2025-04-06)
+
+
+### Bug Fixes
+
+* vite envs added ([67308d4](https://github.com/ksv90/keno-game/commit/67308d4984f3bdb81b87a4343f9d67bfeec560eb))
+* vite envs added ([a9f18fb](https://github.com/ksv90/keno-game/commit/a9f18fb2bb2e53dd4a3b7b272e751e6af86c8f61))
+
 ## 0.0.1 (2025-04-06)
 
 
