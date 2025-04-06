@@ -21,6 +21,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       UI_URL: ${{ vars.UI_URL }}
+      VITE_SERVER_URL: ${{ vars.VITE_SERVER_URL }}
+      VITE_CENTRIFUGO_URL: ${{ vars.VITE_CENTRIFUGO_URL }}
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/install
