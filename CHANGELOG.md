@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.4](https://github.com/ksv90/keno-game/compare/v0.0.3...v0.0.4) (2025-04-06)
+
+
+### Bug Fixes
+
+* workflow_dispatch ([c955a79](https://github.com/ksv90/keno-game/commit/c955a79547c5b599953027854c105ac35b8bbba3))
+* workflow_dispatch ([9c23be8](https://github.com/ksv90/keno-game/commit/9c23be81ed88fdbe425d3707db65bc3f7162dd62))
+
 ## [0.0.3](https://github.com/ksv90/keno-game/compare/v0.0.2...v0.0.3) (2025-04-06)
 
 
