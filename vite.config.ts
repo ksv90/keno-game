@@ -13,6 +13,7 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
+    base: 'keno-game',
     plugins: [
       reactPlugin({
         babel: { plugins: [['@babel/plugin-proposal-decorators', { loose: true, version: '2022-03' }]] },
