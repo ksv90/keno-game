@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.3](https://github.com/ksv90/keno-game/compare/v0.0.2...v0.0.3) (2025-04-06)
+
+
+### Bug Fixes
+
+* vite name added ([92a189d](https://github.com/ksv90/keno-game/commit/92a189d1bb72b96f602467e35033f687346736ff))
+* vite name added ([778f90e](https://github.com/ksv90/keno-game/commit/778f90e80b4669cf1e4d9721ee2fa7ae5fe1f010))
+
 ## [0.0.2](https://github.com/ksv90/keno-game/compare/v0.0.1...v0.0.2) (2025-04-06)
 
 
