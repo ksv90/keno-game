@@ -20,7 +20,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     env:
-      UI_URL: ${{ secrets.UI_URL }}
+      UI_URL: ${{ vars.UI_URL }}
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/install
