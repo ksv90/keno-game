@@ -6,14 +6,14 @@ import reactPlugin from '@vitejs/plugin-react';
 import { defineConfig, loadEnv } from 'vite';
 
 export default defineConfig(({ mode }) => {
-  const { UI_URL } = loadEnv(mode, process.cwd(), '');
+  const { NODE_ENV, UI_URL } = loadEnv(mode, process.cwd(), '');
 
   if (!UI_URL) {
     throw new Error('Требуется установить переменную окружения UI_URL, которая укажет, по какому адресу искать интерфейс игры');
   }
 
   return {
-    base: 'keno-game',
+    base: NODE_ENV === 'production' ? '/keno-game' : '',
     plugins: [
       reactPlugin({
         babel: { plugins: [['@babel/plugin-proposal-decorators', { loose: true, version: '2022-03' }]] },
@@ -31,6 +31,12 @@ export default defineConfig(({ mode }) => {
       target: 'esnext',
       minify: false,
       cssCodeSplit: false,
+    },
+    server: {
+      https: {
+        key: './certs/localhost.key',
+        cert: './certs/localhost.crt',
+      },
     },
   };
 });
