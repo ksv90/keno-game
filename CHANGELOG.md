@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.6](https://github.com/ksv90/keno-game/compare/v0.0.5...v0.0.6) (2025-04-09)
+
+
+### Bug Fixes
+
+* certs added ([d01f1b3](https://github.com/ksv90/keno-game/commit/d01f1b373a1c5b4c61be27ff9f38e74312c3ced4))
+* certs added ([617f75e](https://github.com/ksv90/keno-game/commit/617f75e903bd25219047f1fe5fe70e7b9afc9b98))
+
 ## [0.0.5](https://github.com/ksv90/keno-game/compare/v0.0.4...v0.0.5) (2025-04-06)
 
 
