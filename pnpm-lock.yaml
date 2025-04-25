@@ -33,9 +33,12 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^18.6.3
         version: 18.6.3
+      '@ksv90/fsm':
+        specifier: ^0.2.0
+        version: 0.2.0(@ksv90/decorators@0.5.0)
       '@ksv90/game-ui':
-        specifier: ^0.0.8
-        version: 0.0.8(@types/react@18.3.20)
+        specifier: ^0.0.12
+        version: 0.0.12(@types/react@18.3.20)(react-dom@18.3.1(react@18.3.1))
       '@ksv90/tools':
         specifier: ^0.0.1
         version: 0.0.1
@@ -235,8 +238,8 @@ packages:
     resolution: {integrity: sha512-H45s8fVLYjbhFH62dIJ3WtmJ6RSPt/3DRO0ZcT2SUiYiQyz3BLVb9ADEnLl91m74aQPS3AzzeajZHYOalWe3bg==}
     engines: {node: '>=6.9.0'}
 
-  '@chakra-ui/react@3.15.1':
-    resolution: {integrity: sha512-BZPKvGoiWn1OTkXn4M9XJvXVES6urlCxARsT2XZhFaV41/tkYvuBMSVQ8fbZdCeY7YfnxCbiLLth46tDeEZEyQ==}
+  '@chakra-ui/react@3.16.1':
+    resolution: {integrity: sha512-LOfPrI2L2JdFo1tt/7C+WLJj8NCyZMviWhaRPIY5/oirmvhMuGF+xUTtR+6iKUBk0QcH2ZRsDHbuhtAxCoco0w==}
     peerDependencies:
       '@emotion/react': '>=11'
       react: '>=18'
@@ -616,8 +619,14 @@ packages:
     resolution: {integrity: sha512-31+nLoPZsDYi2wM0RIFrHJj2Kt1lagprjJZfhmbCgX75aXrsmHeDtI0c57EPlMSj5liOJlPqdlnfBXM3UgURFg==}
     engines: {node: '>=16.0.0'}
 
-  '@ksv90/game-ui@0.0.8':
-    resolution: {integrity: sha512-8YTubikG1VTwcskg+6mwExxzbGK4UeaBoUCbVz0qKkO1i1jV9NzYu73n7kArWqCDE9ztovg7GorhHJ/cxAuKNw==}
+  '@ksv90/fsm@0.2.0':
+    resolution: {integrity: sha512-9dOi8CsvBKNtWaJp6WbngnpGui19tAc0N/B/6ChONuQxYOV026UEDciKeeKD7i+ooSAxJK6wSGJQ/WyxEW7d0Q==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      '@ksv90/decorators': ^0.5.0
+
+  '@ksv90/game-ui@0.0.12':
+    resolution: {integrity: sha512-kIY9Xl/cBtoWLPPz31Nn85xfG3mexJqrxFGOIM9VYfgQSs7Djy+UHuHJvnr8M0m5Me5mQqp2Bo0DKLtzWgHvQA==}
     engines: {node: '>=22.0.0'}
 
   '@ksv90/tools@0.0.1':
@@ -787,8 +796,8 @@ packages:
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
 
-  '@swc/helpers@0.5.15':
-    resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
+  '@swc/helpers@0.5.17':
+    resolution: {integrity: sha512-5IKx/Y13RsYd+sauPb2x+U/xZikHjolzfuDgTAl/Tdf3Q8rslRvC19NKDLgAJQ6wsqADk10ntlv08nPFw/gO/A==}
 
   '@tybys/wasm-util@0.9.0':
     resolution: {integrity: sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw==}
@@ -3149,7 +3158,7 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@chakra-ui/react@3.15.1(@emotion/react@11.14.0(@types/react@18.3.20)(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@chakra-ui/react@3.16.1(@emotion/react@11.14.0(@types/react@18.3.20)(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@ark-ui/react': 5.5.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@emotion/is-prop-valid': 1.3.1
@@ -3509,11 +3518,11 @@ snapshots:
 
   '@internationalized/date@3.7.0':
     dependencies:
-      '@swc/helpers': 0.5.15
+      '@swc/helpers': 0.5.17
 
   '@internationalized/number@3.6.0':
     dependencies:
-      '@swc/helpers': 0.5.15
+      '@swc/helpers': 0.5.17
 
   '@jridgewell/gen-mapping@0.3.8':
     dependencies:
@@ -3536,17 +3545,21 @@ snapshots:
 
   '@ksv90/decorators@0.5.0': {}
 
-  '@ksv90/game-ui@0.0.8(@types/react@18.3.20)':
+  '@ksv90/fsm@0.2.0(@ksv90/decorators@0.5.0)':
     dependencies:
-      '@chakra-ui/react': 3.15.1(@emotion/react@11.14.0(@types/react@18.3.20)(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@ksv90/decorators': 0.5.0
+
+  '@ksv90/game-ui@0.0.12(@types/react@18.3.20)(react-dom@18.3.1(react@18.3.1))':
+    dependencies:
+      '@chakra-ui/react': 3.16.1(@emotion/react@11.14.0(@types/react@18.3.20)(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@emotion/react': 11.14.0(@types/react@18.3.20)(react@18.3.1)
       '@valibot/valibot': '@jsr/valibot__valibot@1.0.0-beta.14'
       next-themes: 0.4.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
       react-icons: 5.5.0(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
+      - react-dom
       - supports-color
 
   '@ksv90/tools@0.0.1': {}
@@ -3666,7 +3679,7 @@ snapshots:
 
   '@rtsao/scc@1.1.0': {}
 
-  '@swc/helpers@0.5.15':
+  '@swc/helpers@0.5.17':
     dependencies:
       tslib: 2.8.1
 
