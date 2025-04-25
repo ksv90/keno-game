@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.7](https://github.com/ksv90/keno-game/compare/v0.0.6...v0.0.7) (2025-04-25)
+
+
+### Bug Fixes
+
+* mocks added ([dc75cb8](https://github.com/ksv90/keno-game/commit/dc75cb851bb790c016b318e6aaabfebc250fcef3))
+* mocks added ([da3b6b8](https://github.com/ksv90/keno-game/commit/da3b6b8752b745f9993485120ab86fdb6f9c3652))
+
 ## [0.0.6](https://github.com/ksv90/keno-game/compare/v0.0.5...v0.0.6) (2025-04-09)
 
 
