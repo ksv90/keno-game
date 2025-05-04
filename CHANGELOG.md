@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.8](https://github.com/ksv90/keno-game/compare/v0.0.7...v0.0.8) (2025-05-04)
+
+
+### Bug Fixes
+
+* ui updated ([b7cec81](https://github.com/ksv90/keno-game/commit/b7cec8128ffaa9bc4774193ce197beb7a25c5cdb))
+* ui updated ([399e98a](https://github.com/ksv90/keno-game/commit/399e98ad8a6609a315a6e2d4cec26e6ad593a457))
+
 ## [0.0.7](https://github.com/ksv90/keno-game/compare/v0.0.6...v0.0.7) (2025-04-25)
 
 
