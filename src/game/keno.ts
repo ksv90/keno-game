@@ -1,10 +1,10 @@
 import { Emitter, type IEmitter } from '@ksv90/decorators';
-import type { KenoGame, KenoGameEvents, Ticket, TicketWinData, WinData } from '@ksv90/game-ui/keno';
+import type { ITicket, ITicketWin, IUserWin, KenoGame, KenoGameEvents } from '@ksv90/game-ui/keno';
 
 import { KenoContext } from './context';
 
 export interface KenoEvents extends KenoGameEvents {
-  ticketWin: [Ticket: Ticket];
+  ticketWin: [ticket: ITicket];
 }
 
 export interface Keno extends IEmitter<KenoEvents> {}
@@ -36,7 +36,7 @@ class Keno implements KenoGame {
     this.emit('totalBetChanged', value);
   }
 
-  addTickets(...tickets: Ticket[]): void {
+  addTickets(...tickets: ITicket[]): void {
     for (const ticket of tickets) {
       this.#context.addTicket(ticket);
       this.emit('ticketAdded', ticket);
@@ -55,10 +55,10 @@ class Keno implements KenoGame {
     this.emit('ticketsCleared');
   }
 
-  ticketWins(...ticketWins: TicketWinData[]): void {
-    for (const { ticketId, win, coincidences } of ticketWins) {
+  ticketWins(...ticketWins: ITicketWin[]): void {
+    for (const { ticketId, win, hits } of ticketWins) {
       const ticket = this.#context.getTicketById(ticketId);
-      const winTicket = { ...ticket, win, coincidences } satisfies Ticket;
+      const winTicket = { ...ticket, win, hits } satisfies ITicket & ITicketWin;
       this.#context.addTicket(winTicket);
       this.emit('ticketWin', winTicket);
     }
@@ -73,23 +73,23 @@ class Keno implements KenoGame {
     this.emit('roundStarted', { users });
   }
 
-  roundComplete(roundNumbers: readonly number[], wins: readonly WinData[]): void {
+  roundComplete(balls: readonly number[], userWins: readonly IUserWin[]): void {
     this.clearTickets();
-    this.clearRoundNumbers();
-    this.emit('roundCompleted', { roundNumbers, wins });
+    this.clearBalls();
+    this.emit('roundCompleted', { balls, userWins });
   }
 
-  addRoundNumbers(...values: number[]): void {
+  addBalls(...values: number[]): void {
     for (const value of values) {
-      if (this.#context.hasRoundNumber(value)) continue;
-      this.#context.addRoundNumber(value);
-      this.emit('roundNumberAdded', value);
+      if (this.#context.hasBall(value)) continue;
+      this.#context.addBalls(value);
+      this.emit('ballAdded', value);
     }
   }
 
-  clearRoundNumbers(): void {
-    this.#context.clearRoundNumbers();
-    this.emit('roundNumberCleared');
+  clearBalls(): void {
+    this.#context.clearBalls();
+    this.emit('ballsCleared');
   }
 
   setWin(value: number): void {

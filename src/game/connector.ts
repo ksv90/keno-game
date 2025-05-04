@@ -18,8 +18,8 @@ export class Connector {
     return response;
   }
 
-  async ticketCreate(bet: number, numbers: readonly number[]): Promise<Response> {
-    const response = await this.#post(`${this.#serverUrl}/ticket/create`, { bet, numbers });
+  async ticketCreate(bet: number, spots: readonly number[]): Promise<Response> {
+    const response = await this.#post(`${this.#serverUrl}/ticket/create`, { bet, spots });
     return response;
   }
 

@@ -8,7 +8,7 @@ import { Connector, Keno } from './game';
 
 const ROOT_ID = 'root';
 
-const { PROD, VITE_SERVER_URL, VITE_CENTRIFUGO_URL } = import.meta.env;
+const { PROD, VITE_SERVER_URL, VITE_CENTRIFUGO_URL, VITE_MODE } = import.meta.env;
 
 const $root = document.getElementById(ROOT_ID);
 
@@ -25,7 +25,7 @@ const keno = new Keno();
 const gui = <KenoGui />;
 const rules = <KenoRules />;
 
-if (PROD) {
+if (PROD || VITE_MODE === 'prod') {
   if (!VITE_SERVER_URL || !VITE_CENTRIFUGO_URL) {
     throw new Error('Необходимо установить переменные VITE_SERVER_URL и VITE_CENTRIFUGO_URL');
   }
