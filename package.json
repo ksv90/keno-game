@@ -6,7 +6,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "dev": "vite --host --mode dev --port ${PORT:-3100}",
+    "dev": "vite --host --port ${PORT:-3100}",
     "build": "vite build",
     "preview": "vite preview --port ${PORT:-3100} --host",
     "lint": "eslint",
@@ -27,7 +27,7 @@
     "@commitlint/cli": "^18.6.1",
     "@commitlint/config-conventional": "^18.6.3",
     "@ksv90/fsm": "^0.2.0",
-    "@ksv90/game-ui": "^0.0.12",
+    "@ksv90/game-ui": "^0.0.13",
     "@ksv90/tools": "^0.0.1",
     "@originjs/vite-plugin-federation": "^1.4.0",
     "@types/node": "^22.10.1",

@@ -1,21 +1,21 @@
 import { type IStorer, Storer } from '@ksv90/decorators';
-import type { Ticket } from '@ksv90/game-ui/keno';
+import type { ITicket } from '@ksv90/game-ui/keno';
 
 export interface KenoStore {
   readonly balance: number;
   readonly totalBet: number;
   readonly win: number;
   readonly countdown: number;
-  readonly tickets: Map<string, Ticket>;
-  readonly roundNumbers: Set<number>;
+  readonly tickets: Map<string, ITicket>;
+  readonly balls: Set<number>;
 }
 
 export interface KenoContext extends IStorer<KenoStore> {}
 
 export
-@Storer({ balance: 0, totalBet: 0, win: 0, countdown: 0, tickets: new Map(), roundNumbers: new Set() } satisfies KenoStore)
+@Storer({ balance: 0, totalBet: 0, win: 0, countdown: 0, tickets: new Map(), balls: new Set() } satisfies KenoStore)
 class KenoContext {
-  addTicket(ticket: Ticket): void {
+  addTicket(ticket: ITicket): void {
     const tickets = this.get('tickets');
     tickets.set(ticket.ticketId, ticket);
   }
@@ -30,7 +30,7 @@ class KenoContext {
     tickets.clear();
   }
 
-  getTicketById(ticketId: string): Ticket {
+  getTicketById(ticketId: string): ITicket {
     const tickets = this.get('tickets');
     const ticket = tickets.get(ticketId);
     if (!ticket) {
@@ -39,18 +39,18 @@ class KenoContext {
     return ticket;
   }
 
-  hasRoundNumber(value: number): boolean {
-    const roundNumbers = this.get('roundNumbers');
-    return roundNumbers.has(value);
+  hasBall(value: number): boolean {
+    const balls = this.get('balls');
+    return balls.has(value);
   }
 
-  addRoundNumber(value: number): void {
-    const roundNumbers = this.get('roundNumbers');
-    roundNumbers.add(value);
+  addBalls(value: number): void {
+    const balls = this.get('balls');
+    balls.add(value);
   }
 
-  clearRoundNumbers(): void {
-    const roundNumbers = this.get('roundNumbers');
-    roundNumbers.clear();
+  clearBalls(): void {
+    const balls = this.get('balls');
+    balls.clear();
   }
 }
