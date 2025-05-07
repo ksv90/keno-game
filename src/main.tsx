@@ -1,10 +1,18 @@
-import { StateMachine } from '@ksv90/fsm';
-import { KenoApp, KenoGui, KenoRules } from '@ksv90/game-ui/keno';
-import { ConnectorMock, createRoundMachineConfig, MessengerMock, ServerMock } from '@ksv90/game-ui/mock';
-import { Centrifuge } from 'centrifuge';
+import {
+  createKenoMachineMock,
+  getKenoMachineMockConfig,
+  KenoApp,
+  KenoConnector,
+  KenoConnectorMock,
+  KenoGui,
+  KenoMessengerMock,
+  KenoReceiver,
+  KenoRules,
+  KenoServerMock,
+} from '@ksv90/game-ui/keno';
 import { createRoot } from 'react-dom/client';
 
-import { Connector, Keno } from './game';
+import { Keno } from './game';
 
 const ROOT_ID = 'root';
 
@@ -35,8 +43,8 @@ if (PROD || VITE_MODE === 'prod') {
   }
 
   const keno = new Keno();
-  const connector = new Connector({ serverUrl: VITE_SERVER_URL, token });
-  const centrifuge = new Centrifuge(`${VITE_CENTRIFUGO_URL}/connection/websocket`, { token });
+  const connector = new KenoConnector({ serverUrl: VITE_SERVER_URL, token });
+  const centrifuge = new KenoReceiver(`${VITE_CENTRIFUGO_URL}/connection/websocket`, { token });
 
   createRoot($root).render(<KenoApp game={keno} connector={connector} receiver={centrifuge} ui={gui} rules={rules} />);
 } else {
@@ -53,12 +61,12 @@ if (PROD || VITE_MODE === 'prod') {
     '10': [0, 0, 0, 0, 0, 1, 2, 10, 140, 1400, 20000],
   };
 
-  const serverMock = new ServerMock(payouts);
-  const messengerMock = new MessengerMock();
-  const connectorMock = new ConnectorMock(messengerMock, serverMock);
-  const roundMachine = new StateMachine(createRoundMachineConfig(messengerMock, serverMock));
+  const serverMock = new KenoServerMock(payouts);
+  const messengerMock = new KenoMessengerMock();
+  const connectorMock = new KenoConnectorMock(messengerMock, serverMock);
+  const machineMock = createKenoMachineMock(getKenoMachineMockConfig(messengerMock, serverMock));
 
   createRoot($root).render(<KenoApp game={keno} connector={connectorMock} receiver={messengerMock} ui={gui} rules={rules} />);
 
-  roundMachine.start();
+  machineMock.start();
 }

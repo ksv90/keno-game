@@ -1,17 +1,17 @@
 import { Emitter, type IEmitter } from '@ksv90/decorators';
-import type { ITicket, ITicketWin, IUserWin, KenoGame, KenoGameEvents } from '@ksv90/game-ui/keno';
+import type { IKenoGame, IKenoGameEvents, ITicket, ITicketWin, IUserWin } from '@ksv90/game-ui/keno';
 
 import { KenoContext } from './context';
 
-export interface KenoEvents extends KenoGameEvents {
+export interface IKenoEvents extends IKenoGameEvents {
   ticketWin: [ticket: ITicket];
 }
 
-export interface Keno extends IEmitter<KenoEvents> {}
+export interface Keno extends IEmitter<IKenoEvents> {}
 
 export
 @Emitter()
-class Keno implements KenoGame {
+class Keno implements IKenoGame {
   #context: KenoContext;
 
   constructor(context?: KenoContext) {
