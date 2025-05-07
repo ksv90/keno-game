@@ -11,9 +11,6 @@ importers:
       '@ksv90/decorators':
         specifier: ^0.5.0
         version: 0.5.0
-      centrifuge:
-        specifier: ^5.3.4
-        version: 5.3.4
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -33,12 +30,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^18.6.3
         version: 18.6.3
-      '@ksv90/fsm':
-        specifier: ^0.2.0
-        version: 0.2.0(@ksv90/decorators@0.5.0)
       '@ksv90/game-ui':
-        specifier: ^0.0.13
-        version: 0.0.13(@types/react@18.3.20)(react-dom@18.3.1(react@18.3.1))
+        specifier: ^0.0.15
+        version: 0.0.15(@types/react@18.3.20)(react-dom@18.3.1(react@18.3.1))
       '@ksv90/tools':
         specifier: ^0.0.1
         version: 0.0.1
@@ -619,14 +613,18 @@ packages:
     resolution: {integrity: sha512-31+nLoPZsDYi2wM0RIFrHJj2Kt1lagprjJZfhmbCgX75aXrsmHeDtI0c57EPlMSj5liOJlPqdlnfBXM3UgURFg==}
     engines: {node: '>=16.0.0'}
 
+  '@ksv90/decorators@0.5.1':
+    resolution: {integrity: sha512-c1V98BXqW/GhYCFTKBVwTMB4l5WXEHN7xBXcUEmhVWVgxjtOlWNLf9uPO6gwSpcURi3OhJ+6YTC8F1yPgi6IWA==}
+    engines: {node: '>=16.0.0'}
+
   '@ksv90/fsm@0.2.0':
     resolution: {integrity: sha512-9dOi8CsvBKNtWaJp6WbngnpGui19tAc0N/B/6ChONuQxYOV026UEDciKeeKD7i+ooSAxJK6wSGJQ/WyxEW7d0Q==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       '@ksv90/decorators': ^0.5.0
 
-  '@ksv90/game-ui@0.0.13':
-    resolution: {integrity: sha512-UluDk+AYSBLBryJxFDptL4NjohY3FcfTuwq5pyTLfPtaUpEMg+JVkRxUjhrimX3diaS/fgYy3/hroDVlTG8/5w==}
+  '@ksv90/game-ui@0.0.15':
+    resolution: {integrity: sha512-siiCwPPTHsbV5+/ZBL1WL3k1YJJyDYUT2SIbK4EkUTUDOYhrNejeifHp2rPs60Uce3y+79Kqfj6hD7TJPaZEOQ==}
     engines: {node: '>=22.0.0'}
 
   '@ksv90/tools@0.0.1':
@@ -2155,8 +2153,8 @@ packages:
     resolution: {integrity: sha512-9ie8ItPR6tjY5uYJh8K/Zrv/RMZ5VOlOWvtZdEHYSTFKZfIBPQa9tOAEeAWhd+AnIneLJ22w5fjOYtoutpWq5w==}
     engines: {node: '>=18'}
 
-  long@5.3.1:
-    resolution: {integrity: sha512-ka87Jz3gcx/I7Hal94xaN2tZEOPoUOEVftkQqZx2EeQRN7LGdfLlI3FvZ+7WDplm+vK2Urx9ULrvSowtdCieng==}
+  long@5.3.2:
+    resolution: {integrity: sha512-mNAgZ1GmyNhD7AuqnTG3/VQ26o760+ZYBPKjPvugO8+nLbYfX6TVpJPseBvopbdY+qpZ/lKUnmEc1LeZYS3QAA==}
 
   loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
@@ -3540,15 +3538,20 @@ snapshots:
 
   '@ksv90/decorators@0.5.0': {}
 
-  '@ksv90/fsm@0.2.0(@ksv90/decorators@0.5.0)':
-    dependencies:
-      '@ksv90/decorators': 0.5.0
+  '@ksv90/decorators@0.5.1': {}
 
-  '@ksv90/game-ui@0.0.13(@types/react@18.3.20)(react-dom@18.3.1(react@18.3.1))':
+  '@ksv90/fsm@0.2.0(@ksv90/decorators@0.5.1)':
+    dependencies:
+      '@ksv90/decorators': 0.5.1
+
+  '@ksv90/game-ui@0.0.15(@types/react@18.3.20)(react-dom@18.3.1(react@18.3.1))':
     dependencies:
       '@chakra-ui/react': 3.17.0(@emotion/react@11.14.0(@types/react@18.3.20)(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@emotion/react': 11.14.0(@types/react@18.3.20)(react@18.3.1)
+      '@ksv90/decorators': 0.5.1
+      '@ksv90/fsm': 0.2.0(@ksv90/decorators@0.5.1)
       '@valibot/valibot': '@jsr/valibot__valibot@1.0.0-beta.14'
+      centrifuge: 5.3.4
       next-themes: 0.4.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-icons: 5.5.0(react@18.3.1)
@@ -5432,7 +5435,7 @@ snapshots:
       strip-ansi: 7.1.0
       wrap-ansi: 9.0.0
 
-  long@5.3.1: {}
+  long@5.3.2: {}
 
   loose-envify@1.4.0:
     dependencies:
@@ -5678,7 +5681,7 @@ snapshots:
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
       '@types/node': 22.14.0
-      long: 5.3.1
+      long: 5.3.2
 
   proxy-compare@3.0.1: {}
 
