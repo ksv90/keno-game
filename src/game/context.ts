@@ -1,5 +1,5 @@
+import type { ITicket } from '@game-ui/keno';
 import { type IStorer, Storer } from '@ksv90/decorators';
-import type { ITicket } from '@ksv90/game-ui/keno';
 
 export interface KenoStore {
   readonly balance: number;

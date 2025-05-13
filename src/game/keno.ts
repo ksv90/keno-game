@@ -1,5 +1,5 @@
+import type { IKenoGame, IKenoGameEvents, ITicket, ITicketWin, IUserWin } from '@game-ui/keno';
 import { Emitter, type IEmitter } from '@ksv90/decorators';
-import type { IKenoGame, IKenoGameEvents, ITicket, ITicketWin, IUserWin } from '@ksv90/game-ui/keno';
 
 import { KenoContext } from './context';
 
