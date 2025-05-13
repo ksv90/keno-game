@@ -16,7 +16,7 @@ export default tsConfig(
       },
     },
   },
-  { ignores: ['dist/*'] },
+  { ignores: ['dist/*', '@mf-types/*'] },
   {
     languageOptions: {
       globals: { ...globals.browser, ...globals.node },
