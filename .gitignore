@@ -1,6 +1,5 @@
-@mf-types/
-node_modules/
-dist/
-certs/
+node_modules/*
+dist/*
+certs/*
 .DS_Store
 .env
