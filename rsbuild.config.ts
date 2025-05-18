@@ -33,4 +33,7 @@ export default defineConfig({
     },
     https: httpsKey && httpsCert ? { key: httpsKey, cert: httpsCert } : undefined,
   },
+  output: {
+    assetPrefix: '/keno-game/',
+  },
 });
