@@ -8,6 +8,8 @@ const loadEnvResult = loadEnv();
 
 const { UI_URL, PUBLIC_MODE } = loadEnvResult.parsed;
 
+console.log('UI_URL', UI_URL);
+
 const prodMode = PUBLIC_MODE === 'prod';
 
 const httpsKey = prodMode && readFileSync('./certs/localhost.key', 'utf-8');
