@@ -1,14 +1,11 @@
 import { readFileSync } from 'node:fs';
+import process from 'node:process';
 
 import { createModuleFederationConfig, pluginModuleFederation } from '@module-federation/rsbuild-plugin';
-import { defineConfig, loadEnv } from '@rsbuild/core';
+import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
 
-const loadEnvResult = loadEnv();
-
-const { UI_URL, PUBLIC_MODE } = loadEnvResult.parsed;
-
-console.log('UI_URL', UI_URL);
+const { UI_URL, PUBLIC_MODE } = process.env;
 
 const prodMode = PUBLIC_MODE === 'prod';
 
