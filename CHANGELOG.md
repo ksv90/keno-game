@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.0.10](https://github.com/ksv90/keno-game/compare/v0.0.9...v0.0.10) (2025-05-13)
+
+
+### Bug Fixes
+
+* builder changed ([f110f05](https://github.com/ksv90/keno-game/commit/f110f05d08ed3c284dbb11b66ab9fb04e7b93732))
+* builder changed ([9c95dd1](https://github.com/ksv90/keno-game/commit/9c95dd1aeb36ecd17e3b0f38189f65e286c95a8e))
+* manual types ([4d82bfe](https://github.com/ksv90/keno-game/commit/4d82bfee7d47d25bf6efc110fe0b0fd8abbe1c3d))
+* typo ([ce549e8](https://github.com/ksv90/keno-game/commit/ce549e87864c9fa98fabaa482ddcd4d4b5e93dff))
+
 ## [0.0.9](https://github.com/ksv90/keno-game/compare/v0.0.8...v0.0.9) (2025-05-07)
 
 
