@@ -8,6 +8,6 @@ export * from './keno.types';
 export * from './mock';
 export * from "../components";
 export * from "../helpers";
-export * from "../mediators";
+export * from "../panels";
 export * from "../providers";
 export * from "../schemes";

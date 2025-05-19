@@ -5,7 +5,7 @@ import { createModuleFederationConfig, pluginModuleFederation } from '@module-fe
 import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
 
-const { UI_URL, PUBLIC_MODE } = process.env;
+const { UI_URL, PUBLIC_MODE = 'prod' } = process.env;
 
 const prodMode = PUBLIC_MODE === 'prod';
 
@@ -34,5 +34,10 @@ export default defineConfig({
   },
   output: {
     assetPrefix: '/keno-game/',
+  },
+  source: {
+    define: {
+      'import.meta.env.PUBLIC_MODE': JSON.stringify(PUBLIC_MODE),
+    },
   },
 });
