@@ -1,3 +1,5 @@
+import './global.css';
+
 import { KenoApp, KenoConnector, KenoGui, KenoPreview, KenoReceiver, KenoRules } from '@game-ui/keno';
 import { createRoot } from 'react-dom/client';
 
