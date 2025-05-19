@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.14](https://github.com/ksv90/keno-game/compare/v0.0.13...v0.0.14) (2025-05-19)
+
+
+### Bug Fixes
+
+* deploy workflow env changed ([e08a9f2](https://github.com/ksv90/keno-game/commit/e08a9f22d10b9c6532b0ff5a1285f8aba3a9eb6a))
+* deploy workflow env changed ([640bffc](https://github.com/ksv90/keno-game/commit/640bffcfec68d1a8af28302f6737a4107edb517e))
+
 ## [0.0.13](https://github.com/ksv90/keno-game/compare/v0.0.12...v0.0.13) (2025-05-19)
 
 
