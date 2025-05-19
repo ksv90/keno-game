@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.0.12](https://github.com/ksv90/keno-game/compare/v0.0.11...v0.0.12) (2025-05-19)
+
+
+### Bug Fixes
+
+* env seted ([2630fa9](https://github.com/ksv90/keno-game/commit/2630fa97c7f62a93e6a0309b497925c08785ff9a))
+* env seted ([f3786e1](https://github.com/ksv90/keno-game/commit/f3786e113bbb93bf479e518390eee24633312b82))
+* mode changed ([8fd37ca](https://github.com/ksv90/keno-game/commit/8fd37ca7ba1292f10a139702d92cef74d7ab44e5))
+* mode changed ([5be245e](https://github.com/ksv90/keno-game/commit/5be245ed2266edf132af3714c6d048ff984541c0))
+
 ## [0.0.11](https://github.com/ksv90/keno-game/compare/v0.0.10...v0.0.11) (2025-05-18)
 
 
