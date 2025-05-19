@@ -5,3 +5,4 @@ export declare const betControl: string;
 export declare const betValue: string;
 export declare const controls: string;
 export declare const controlButton: string;
+export declare const betButton: string;
