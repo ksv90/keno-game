@@ -1,6 +1,7 @@
 export * from './balance-service';
 export * from './balls-service';
 export * from './bet-service';
+export * from './config-service';
 export * from './connector-service';
 export * from './countdown-service';
 export * from './error-boundary';

@@ -5,6 +5,9 @@ export interface WindowService {
     get orientation(): Orientation;
     get portrait(): boolean;
     get landscape(): boolean;
+    get desktop(): boolean;
+    get full(): boolean;
+    get toggleFullScreen(): () => void;
 }
 export declare const WindowServiceContext: import("react").Context<WindowService | null>;
 export declare const useWindowService: () => WindowService;

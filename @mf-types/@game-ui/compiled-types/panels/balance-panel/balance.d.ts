@@ -1,2 +1,5 @@
-import { JSX } from 'react';
-export declare function BalancePanel(): JSX.Element;
+import { CSSProperties, JSX } from 'react';
+export interface IBalancePanelProps {
+    readonly style?: CSSProperties;
+}
+export declare function BalancePanel(props: IBalancePanelProps): JSX.Element;

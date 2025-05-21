@@ -10,5 +10,6 @@ export interface ITicketData {
 }
 export interface TicketProps extends ITicketData {
     readonly onClick?: (id: string) => void;
+    readonly onClose: null | ((id: string) => void);
 }
 export declare const Ticket: FC<TicketProps>;

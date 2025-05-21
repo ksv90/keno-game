@@ -1,4 +1,5 @@
-import { JSX } from 'react';
+import { CSSProperties, JSX } from 'react';
 export interface IInfoPanelProps {
+    readonly style?: CSSProperties;
 }
-export declare function InfoPanel(_props: IInfoPanelProps): JSX.Element;
+export declare function InfoPanel(props: IInfoPanelProps): JSX.Element;

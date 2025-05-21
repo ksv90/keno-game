@@ -1,6 +1,5 @@
-import { JSX } from 'react';
-export interface SceneProps {
-    readonly onSpotsChange: (spotId: number) => void;
-    readonly spotList: number[];
+import { CSSProperties, JSX } from 'react';
+export interface IScenePanelProps {
+    readonly style?: CSSProperties;
 }
-export declare function ScenePanel(props: SceneProps): JSX.Element;
+export declare function ScenePanel(props: IScenePanelProps): JSX.Element;
