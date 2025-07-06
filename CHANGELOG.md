@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.0.15](https://github.com/ksv90/keno-game/compare/v0.0.14...v0.0.15) (2025-07-06)
+
+
+### Bug Fixes
+
+* lock file fixed ([229ac39](https://github.com/ksv90/keno-game/commit/229ac39fa4cebdbfaaf548ce973b21ede43da401))
+* mf types added to ignore ([60328c4](https://github.com/ksv90/keno-game/commit/60328c4c7d4cb4cf8b0a25e60d84e3e0a35aa444))
+* node js updated ([145fef8](https://github.com/ksv90/keno-game/commit/145fef82f6a56ce825bee2b4b70d57781523de1e))
+* removed mf types ([8953f71](https://github.com/ksv90/keno-game/commit/8953f71f766a1b3cd345d5d4f5c63b0dfbef3331))
+* types updated ([7d398df](https://github.com/ksv90/keno-game/commit/7d398dfa5013d8d9145cc899c2d7c82f7afab247))
+
 ## [0.0.14](https://github.com/ksv90/keno-game/compare/v0.0.13...v0.0.14) (2025-05-19)
 
 
