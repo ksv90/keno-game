@@ -21,10 +21,15 @@ const moduleFederationConfig = createModuleFederationConfig({
   shared: {
     react: { singleton: true },
   },
+  dts: {
+    consumeTypes: {
+      typesOnBuild: true,
+    },
+  },
 });
 
 export default defineConfig({
-  plugins: [pluginReact(), pluginModuleFederation(moduleFederationConfig)],
+  plugins: [pluginReact(), pluginModuleFederation(moduleFederationConfig, {})],
   server: {
     port: 2222,
     cors: {
